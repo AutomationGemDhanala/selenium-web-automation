@@ -1,0 +1,9 @@
+*.iml
+**/.idea/
+**/target/*
+**/.classpath
+**/.settings
+**/.project
+**/*.log
+*.log
+**/test/resources/*.csv

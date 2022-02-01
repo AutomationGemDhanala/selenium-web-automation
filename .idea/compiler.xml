@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="selenium-web-automation" />
+        <module name="student-marks-evaluation" />
       </profile>
     </annotationProcessing>
   </component>
