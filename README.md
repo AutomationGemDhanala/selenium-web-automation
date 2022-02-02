@@ -15,14 +15,14 @@
 * Rewrite the csv file with average value
 
 #### Running the project in local
-##### Pre-requisites
-- java installed in your system [check with : 'java --version']
-- maven is configured in your system [check with : 'mvn --version']
+* ##### Pre-requisites
+    - java installed in your system [check with : 'java --version']
+    - maven is configured in your system [check with : 'mvn --version']
 
-##### Run test locally with below steps
-* Clone the project to local - 'git clone https://github.com/venkateswarlu-dhanala/student-marks-evaluation.git'
-* Run the command for first time - 'mvn clean install -DskipTests'
-* Run the command for test execution - 'mvn test'
+* ##### Run test locally with below steps
+    - Clone the project to local - 'git clone https://github.com/venkateswarlu-dhanala/student-marks-evaluation.git'
+    - Run the command for first time - 'mvn clean install -DskipTests'
+    - Run the command for test execution - 'mvn test'
 
 
 
