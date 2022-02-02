@@ -1,5 +1,3 @@
-*.iml
-*.idea
 **/target/*
 **/.classpath
 **/.settings
@@ -7,3 +5,7 @@
 **/*.log
 *.log
 **/test/resources/*.csv
+
+#IDE metadata
+**.idea/**
+*.iml
