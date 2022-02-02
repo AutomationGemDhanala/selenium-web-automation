@@ -6,137 +6,123 @@
     <groupId>student.marks.evaluation</groupId>
     <artifactId>student-marks-evaluation</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>Selenium Web Automation</name>
+    <name>Student Marks Evaluation</name>
     <packaging>jar</packaging>
-    <scm>
-        <connection>${scm.connection.prefix}.${project.artifactId}</connection>
-        <developerConnection>${scm.connection.prefix}.${project.artifactId}</developerConnection>
-        <url>${scm.url.prefix}.${project.artifactId}</url>
-        <tag>HEAD</tag>
-    </scm>
     <properties>
         <scm.connection.prefix>scm:git:https://github.com/venkateswarlu-dhanala</scm.connection.prefix>
         <scm.url.prefix>https://github.com/venkateswarlu-dhanala</scm.url.prefix>
-        <selenium.java.version>4.1.1</selenium.java.version>
-        <gherkin.version>2.12.2</gherkin.version>
-        <cucumber.java.version>1.2.6</cucumber.java.version>
-        <cucumber.junit.version>1.2.6</cucumber.junit.version>
+        <io.cucumber.gherkin.version>7.2.3</io.cucumber.gherkin.version>
+        <io.cucumber.java.version>7.2.3</io.cucumber.java.version>
+        <io.cucumber.junit.version>7.2.3</io.cucumber.junit.version>
+        <cucumber.jvm.deps.version>1.0.6</cucumber.jvm.deps.version>
+        <opencsv.version>4.1</opencsv.version>
+        <commons.lang3.version>3.1</commons.lang3.version>
+        <ch.qos.logback.core.version>1.3.0-alpha13</ch.qos.logback.core.version>
+        <ch.qos.logback.classic.version>1.3.0-alpha13</ch.qos.logback.classic.version>
+        <org.slf4j.version>2.0.0-alpha6</org.slf4j.version>
         <maven.surefire.plugin.version>2.12.4</maven.surefire.plugin.version>
         <maven.compiler.plugin.version>3.1</maven.compiler.plugin.version>
         <maven.resources.plugin.version>2.6</maven.resources.plugin.version>
         <maven.release.plugin.version>3.0.0-M4</maven.release.plugin.version>
         <maven.resources.encoding>UTF-8</maven.resources.encoding>
-        <maven.compiler.source>15</maven.compiler.source>
-        <maven.compiler.target>15</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>org.seleniumhq.selenium</groupId>
-                <artifactId>selenium-java</artifactId>
-                <version>${selenium.java.version}</version>
+                <groupId>io.cucumber</groupId>
+                <artifactId>cucumber-gherkin</artifactId>
+                <version>${io.cucumber.gherkin.version}</version>
             </dependency>
             <dependency>
-                <groupId>info.cukes</groupId>
-                <artifactId>gherkin</artifactId>
-                <version>${gherkin.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>info.cukes</groupId>
+                <groupId>io.cucumber</groupId>
                 <artifactId>cucumber-java</artifactId>
-                <version>${cucumber.java.version}</version>
+                <version>${io.cucumber.java.version}</version>
             </dependency>
             <dependency>
-                <groupId>info.cukes</groupId>
+                <groupId>io.cucumber</groupId>
                 <artifactId>cucumber-junit</artifactId>
-                <version>${cucumber.junit.version}</version>
+                <version>${io.cucumber.junit.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.apache.logging.log4j</groupId>
-                <artifactId>log4j-core</artifactId>
-                <version>2.17.1</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.logging.log4j</groupId>
-                <artifactId>log4j-api</artifactId>
-                <version>2.17.1</version>
+                <groupId>io.cucumber</groupId>
+                <artifactId>cucumber-jvm-deps</artifactId>
+                <version>${cucumber.jvm.deps.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.opencsv</groupId>
                 <artifactId>opencsv</artifactId>
-                <version>4.1</version>
+                <version>${opencsv.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons.lang3.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-core</artifactId>
+                <version>${ch.qos.logback.core.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-classic</artifactId>
+                <version>${ch.qos.logback.classic.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${org.slf4j.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
     <dependencies>
         <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-lang3</artifactId>
-            <version>3.1</version>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-gherkin</artifactId>
+            <version>${io.cucumber.gherkin.version}</version>
         </dependency>
         <dependency>
-            <groupId>log4j</groupId>
-            <artifactId>log4j</artifactId>
-            <version>1.2.12</version>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-java</artifactId>
         </dependency>
         <dependency>
-            <groupId>commons-io</groupId>
-            <artifactId>commons-io</artifactId>
-            <version>1.4</version>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-junit</artifactId>
+            <version>${io.cucumber.junit.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-jvm-deps</artifactId>
+            <version>${cucumber.jvm.deps.version}</version>
         </dependency>
         <dependency>
             <groupId>com.opencsv</groupId>
             <artifactId>opencsv</artifactId>
-            <version>4.1</version>
+            <version>${opencsv.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>${commons.lang3.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-core</artifactId>
+            <version>${ch.qos.logback.core.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>${ch.qos.logback.classic.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${org.slf4j.version}</version>
         </dependency>
     </dependencies>
-    <profiles>
-        <profile>
-            <id>local</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-surefire-plugin</artifactId>
-                        <version>${maven.surefire.plugin.version}</version>
-                        <configuration>
-                            <failIfNoSpecifiedTests>false</failIfNoSpecifiedTests>
-                            <excludes>
-                                <exclude>**/*EvaluationRunner.java</exclude>
-                            </excludes>
-                        </configuration>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-        <profile>
-            <id>dev-test</id>
-            <activation>
-                <property>
-                    <name>test.env</name>
-                    <value>dev-test</value>
-                </property>
-            </activation>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-surefire-plugin</artifactId>
-                        <version>${maven.surefire.plugin.version}</version>
-                        <configuration>
-                            <failIfNoSpecifiedTests>false</failIfNoSpecifiedTests>
-                            <excludes>
-                                <exclude>**/*EvaluationRunner.java</exclude>
-                            </excludes>
-                        </configuration>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-    </profiles>
     <build>
         <finalName>${project.artifactId}</finalName>
         <pluginManagement>
