@@ -4,6 +4,7 @@
 **/.project
 **/*.log
 *.log
+**/main/resources/testng/*.csv
 **/test/resources/*.csv
 
 #IDE metadata
