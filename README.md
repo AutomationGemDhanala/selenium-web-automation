@@ -11,9 +11,9 @@
     - "Name","Description","Rating","Cost"
 * Each product with their top two product are in csv with comma separated format
 
-############################################################################################################
-######## *Interesting factor of the project : Same project run on both TestNG framework & Junit framework for cucumber*
-############################################################################################################
+###############################################################################
+#### *Interesting factor of the project : Same project run on both TestNG framework & Junit framework for cucumber*
+###############################################################################
 
 #### Running the project in local
 * ##### Pre-requisites
